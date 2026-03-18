@@ -151,7 +151,7 @@ jobs:
             mkdir -p "$OUT_DIR"
 
             make -j"$(nproc --all)" O="$OUT_DIR" ARCH=arm64 CC=clang LD=ld.lld LLVM=1 LLVM_IAS=1 \
-       "$KERNEL_DEFCONFIG" || err "defconfig failed"
+            "$KERNEL_DEFCONFIG" || err "defconfig failed"
 
             make -j"$(nproc --all)" O="$OUT_DIR" ARCH=arm64 CC=clang LD=ld.lld LLVM=1 LLVM_IAS=1 \
                  || err "Build failed"
