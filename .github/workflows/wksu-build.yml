@@ -95,7 +95,8 @@ jobs:
       - name: Build the kernel
         run: |
           chmod +x build.sh
-          ./build.sh 2>&1 | tee "$GITHUB_WORKSPACE/build.log"
+          cd kernel
+          ../build.sh 2>&1 | tee "$GITHUB_WORKSPACE/build.log"
 
       - name: Package image with AnyKernel3
         id: package
