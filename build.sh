@@ -30,9 +30,9 @@ setup_clang() {
     CLANG_URL="$URL_BASE/mirror-goog-main-llvm-toolchain-source/${CLANG_VERSION}.tar.gz"
 
     if command -v wget >/dev/null 2>&1; then
-      DOWNLOAD_CLANG=(wget -q --show-progress -O "$TARBALL" "$PRIMARY_URL")
+      DOWNLOAD_CLANG=(wget -q --show-progress -O "$TARBALL" "$CLANG_URL")
     elif command -v curl >/dev/null 2>&1; then
-      DOWNLOAD_CLANG=(curl -L --fail -o "$TARBALL" "$PRIMARY_URL")
+      DOWNLOAD_CLANG=(curl -L --fail -o "$TARBALL" "$CLANG_URL")
     else
       err "Need wget or curl to download the toolchain."
     fi
