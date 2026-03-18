@@ -42,7 +42,6 @@ setup_clang() {
     info "Extracting toolchain..."
     tar -xzf "$TARBALL" -C "$CLANG_DIR"
     rm -f "$TARBALL"
-  fi
 
   export PATH="$CLANG_DIR/bin:$PATH"
   ver="$("$CLANG_BINARY" --version | head -n1)"
