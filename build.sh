@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-cd $(pwd)/kernel
 
 # (env-overridable)
 KERNEL_DEFCONFIG=${KERNEL_DEFCONFIG:-gki_defconfig}
